@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
             <h3 className="text-2xl font-bold text-slate-800 mb-6">Book Your Demo</h3>
             <iframe 
               src="https://api.leadconnectorhq.com/widget/booking/ToOQ56DV5zVWOtXiotmd" 
-              style={{ width: '100%', height: '600px', border: 'none' }}
+              style={{ width: '100%', height: '800px', border: 'none' }}
               title="Booking Calendar"
             />
           </div>

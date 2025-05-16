@@ -11,8 +11,10 @@ import Footer from './components/Footer';
 import ChatWidget from './components/ChatWidget';
 import Blog from './pages/Blog';
 import CaseStudies from './pages/CaseStudies';
-import KnowledgeBase from './pages/KnowledgeBase';
+import Affiliate from './pages/Affiliate';
 import FAQs from './pages/FAQs';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -43,10 +45,14 @@ function App() {
         return <Blog />;
       case 'case-studies':
         return <CaseStudies />;
-      case 'knowledge-base':
-        return <KnowledgeBase />;
+      case 'affiliate':
+        return <Affiliate />;
       case 'faqs':
         return <FAQs />;
+      case 'terms':
+        return <Terms />;
+      case 'privacy':
+        return <Privacy />;
       default:
         return (
           <>
