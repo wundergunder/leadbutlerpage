@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Resources</h3>
               <ul className="space-y-2">
-                {['Case Studies', 'Affiliate', 'FAQs'].map((item) => (
+                {['Affiliate', 'FAQs'].map((item) => (
                   <li key={item}>
                     <a 
                       href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 

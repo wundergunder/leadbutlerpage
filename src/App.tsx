@@ -9,7 +9,6 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ChatWidget from './components/ChatWidget';
-import CaseStudies from './pages/CaseStudies';
 import Affiliate from './pages/Affiliate';
 import FAQs from './pages/FAQs';
 import Terms from './pages/Terms';
@@ -40,8 +39,6 @@ function App() {
 
   const getPage = () => {
     switch (currentPage) {
-      case 'case-studies':
-        return <CaseStudies />;
       case 'affiliate':
         return <Affiliate />;
       case 'faqs':
