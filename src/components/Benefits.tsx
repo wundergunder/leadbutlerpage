@@ -101,8 +101,8 @@ const Benefits: React.FC = () => {
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-100 rounded-full opacity-70 blur-xl"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-teal-100 rounded-full opacity-70 blur-xl"></div>
               <img 
-                src="https://images.pexels.com/photos/8850826/pexels-photo-8850826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Hotel receptionist working efficiently" 
+                src="https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/6827940680f93e4807ae89bf.jpeg" 
+                alt="Professional customer service representative providing excellent support" 
                 className="relative z-10 rounded-xl shadow-lg w-full h-auto object-cover"
               />
               

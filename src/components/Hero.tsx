@@ -31,8 +31,8 @@ const Hero: React.FC = () => {
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-teal-100 rounded-full opacity-70 blur-xl"></div>
               <div className="relative bg-white p-6 rounded-2xl shadow-xl z-10 transform transition-all">
                 <img 
-                  src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                  alt="Hotel reception with digital chatbot assistant" 
+                  src="https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/68279358dbfc245118fd8027.jpeg" 
+                  alt="Professional customer service representative with headset" 
                   className="w-full h-auto rounded-lg mb-6"
                 />
                 <div className="flex justify-between mb-4">
