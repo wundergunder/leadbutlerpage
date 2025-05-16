@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 {['AI Chatbot', 'Guest Communication', 'Analytics Dashboard', 'Multilingual Support'].map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-slate-300 hover:text-white transition-colors">
+                    <a href="#services" className="text-slate-300 hover:text-white transition-colors">
                       {item}
                     </a>
                   </li>
@@ -47,7 +47,11 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 {['Blog', 'Case Studies', 'Affiliate', 'FAQs'].map((item) => (
                   <li key={item}>
-                    <a href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} className="text-slate-300 hover:text-white transition-colors">
+                    <a 
+                      href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
+                      onClick={() => window.location.hash = item.toLowerCase().replace(/\s+/g, '-')}
+                      className="text-slate-300 hover:text-white transition-colors"
+                    >
                       {item}
                     </a>
                   </li>
@@ -58,13 +62,24 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Legal</h3>
               <ul className="space-y-2">
-                {['Privacy Policy', 'Terms of Service'].map((item) => (
-                  <li key={item}>
-                    <a href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} className="text-slate-300 hover:text-white transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <a 
+                    href="#privacy" 
+                    onClick={() => window.location.hash = 'privacy'}
+                    className="text-slate-300 hover:text-white transition-colors"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#terms" 
+                    onClick={() => window.location.hash = 'terms'}
+                    className="text-slate-300 hover:text-white transition-colors"
+                  >
+                    Terms of Service
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { DollarSign, Users, BarChart4, ArrowRight } from 'lucide-react';
 
 const BenefitCard = ({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) => (
@@ -12,6 +12,17 @@ const BenefitCard = ({ icon, title, description }: { icon: React.ReactNode; titl
 );
 
 const Affiliate: React.FC = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://link.msgsndr.com/js/form_embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const benefits = [
     {
       icon: <DollarSign className="w-6 h-6" />,
@@ -82,10 +93,22 @@ const Affiliate: React.FC = () => {
             </div>
             <div className="p-8 md:p-12 bg-slate-50">
               <h3 className="text-2xl font-bold text-slate-800 mb-6">Apply to Become an Affiliate</h3>
-              <iframe 
-                src="https://api.leadconnectorhq.com/widget/form/ToOQ56DV5zVWOtXiotmd" 
-                style={{ width: '100%', height: '600px', border: 'none' }}
-                title="Affiliate Application Form"
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/bF0B7TtS8SMHkDXogmvx"
+                style={{ width: '100%', height: '534px', border: 'none', borderRadius: '3px' }}
+                id="inline-bF0B7TtS8SMHkDXogmvx" 
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Affiliate Onboarding"
+                data-height="534"
+                data-layout-iframe-id="inline-bF0B7TtS8SMHkDXogmvx"
+                data-form-id="bF0B7TtS8SMHkDXogmvx"
+                title="Affiliate Onboarding"
               />
             </div>
           </div>
