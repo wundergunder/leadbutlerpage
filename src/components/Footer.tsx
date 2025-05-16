@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin, MessageSquare } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, MessageSquare, Twitter } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
@@ -21,6 +21,9 @@ const Footer: React.FC = () => {
               </a>
               <a href="#" className="text-slate-300 hover:text-white transition-colors">
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com/LeadButlerTeam" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
               </a>
               <a href="#" className="text-slate-300 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
@@ -45,7 +48,7 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="font-semibold text-lg mb-4">Resources</h3>
               <ul className="space-y-2">
-                {['Blog', 'Case Studies', 'Affiliate', 'FAQs'].map((item) => (
+                {['Case Studies', 'Affiliate', 'FAQs'].map((item) => (
                   <li key={item}>
                     <a 
                       href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
