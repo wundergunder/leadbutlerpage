@@ -3,7 +3,7 @@ import { Check, Calculator } from 'lucide-react';
 
 const Pricing: React.FC = () => {
   const [roomCount, setRoomCount] = useState(1);
-  const pricePerRoom = 85;
+  const pricePerRoom = 9;
   const totalPrice = roomCount * pricePerRoom;
 
   const features = [

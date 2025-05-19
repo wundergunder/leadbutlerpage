@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Hotel, MessageSquare, Star } from 'lucide-react';
+import { Hotel, MessageSquare, Star, ArrowDownRight } from 'lucide-react';
 
 const Sendero: React.FC = () => {
   useEffect(() => {
@@ -99,6 +99,14 @@ const Sendero: React.FC = () => {
               Schedule Your Demo Now
             </a>
           </div>
+        </div>
+      </div>
+
+      {/* Floating chat indicator */}
+      <div className="fixed bottom-28 right-8 bg-blue-600 text-white p-4 rounded-lg shadow-lg animate-bounce">
+        <div className="flex items-center gap-2">
+          <span className="font-medium">Click here to try the chatbot!</span>
+          <ArrowDownRight className="w-5 h-5" />
         </div>
       </div>
     </div>
