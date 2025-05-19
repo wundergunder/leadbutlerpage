@@ -3,17 +3,14 @@ import { Hotel, MessageSquare, Star } from 'lucide-react';
 
 const Mizata: React.FC = () => {
   useEffect(() => {
-    // Create script element for chat widget
     const script = document.createElement('script');
     script.src = 'https://widgets.leadconnectorhq.com/loader.js';
     script.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js');
     script.setAttribute('data-widget-id', '682b712749bd8268f5cd4212');
     script.async = true;
     
-    // Append script to body
     document.body.appendChild(script);
     
-    // Clean up
     return () => {
       document.body.removeChild(script);
     };
@@ -68,26 +65,39 @@ const Mizata: React.FC = () => {
           <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
             <h3 className="text-xl font-semibold text-slate-800 mb-6">Try Our AI Chatbot</h3>
             <p className="text-slate-600 mb-6">
-              Interact with our AI chatbot below to experience the future of hotel guest communication.
+              Our AI chatbot is ready to assist you! Look for the chat icon in the bottom right corner of this page to start a conversation and experience the future of hotel guest communication firsthand.
             </p>
-            <div className="bg-slate-50 rounded-lg p-4">
-              <p className="text-slate-500 text-center">The chat widget will appear in the bottom right corner</p>
+            <div className="bg-blue-50 rounded-lg p-6 border border-blue-100 space-y-4">
+              <p className="text-blue-800">
+                <strong>👋 Test the Chatbot:</strong> Ask about check-in times, amenities, nearby attractions, or any other questions you might have about MIZATA BY ANTIRESORT.
+              </p>
+              <div className="border-t border-blue-100 pt-4">
+                <p className="text-blue-800 font-medium mb-2">Our AI responds across multiple channels:</p>
+                <ul className="grid grid-cols-2 gap-2 text-blue-700">
+                  <li>✉️ Email</li>
+                  <li>📱 Text Messages</li>
+                  <li>💬 WhatsApp</li>
+                  <li>📸 Instagram DMs</li>
+                  <li>👥 Facebook Messages</li>
+                  <li>💻 Website Chat</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg p-8">
+          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
             <h3 className="text-xl font-semibold text-slate-800 mb-6">Schedule a Demo</h3>
-            <p className="text-slate-600 mb-6">
+            <p className="text-slate-600 mb-8">
               Want to learn more about how Lead Butler can transform your guest communication? Schedule a personalized demo with our team.
             </p>
-            <iframe 
-              src="https://api.leadconnectorhq.com/widget/booking/ToOQ56DV5zVWOtXiotmd" 
-              style={{ width: '100%', border: 'none', overflow: 'hidden' }} 
-              scrolling="no" 
-              id="ToOQ56DV5zVWOtXiotmd_1747677948114"
-            />
-            <br />
-            <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+            <a
+              href="https://api.leadconnectorhq.com/widget/booking/ToOQ56DV5zVWOtXiotmd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            >
+              Schedule Your Demo Now
+            </a>
           </div>
         </div>
       </div>

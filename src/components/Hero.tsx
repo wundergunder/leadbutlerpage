@@ -14,14 +14,14 @@ const Hero: React.FC = () => {
               Your 24/7 Virtual <span className="text-blue-600">Concierge</span> Service
             </h1>
             <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
-              Lead Butler's AI chatbot answers 95% of all guest inquiries for hotels, Airbnbs, and hostels, saving time and improving satisfaction.
+              Lead Butler's AI chatbot answers 95% of all guest inquiries for hotels, Airbnbs, and hostels, saving time and improving satisfaction. Try our chatbot demos to see it in action!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">
                 Schedule a Demo
               </a>
-              <a href="#services" className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg border border-blue-200 hover:border-blue-300 hover:bg-slate-50 transition-all">
-                Explore Services
+              <a href="#demos" className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg border border-blue-200 hover:border-blue-300 hover:bg-slate-50 transition-all">
+                Try Our Chatbots
               </a>
             </div>
           </div>

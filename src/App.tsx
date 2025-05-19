@@ -8,7 +8,6 @@ import Pricing from './components/Pricing';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ChatWidget from './components/ChatWidget';
 import Affiliate from './pages/Affiliate';
 import FAQs from './pages/FAQs';
 import Terms from './pages/Terms';
@@ -73,7 +72,6 @@ function App() {
       <Navbar />
       {getPage()}
       <Footer />
-      <ChatWidget />
     </div>
   );
 }

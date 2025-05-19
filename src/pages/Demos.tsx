@@ -22,7 +22,7 @@ const Demos: React.FC = () => {
     {
       name: "MIZATA",
       description: "Experience how Lead Butler could enhance guest communication at MIZATA BY ANTIRESORT, a luxury eco-resort focused on sustainable hospitality.",
-      image: "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg"
+      image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682b73e47d0ac009dcba4414.png"
     }
   ];
 

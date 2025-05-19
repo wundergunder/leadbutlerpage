@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {['Services', 'Benefits', 'Use Cases', 'Testimonials'].map((item) => (
+            {['Services', 'Benefits', 'Use Cases', 'Demos', 'Testimonials'].map((item) => (
               <a 
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b">
           <div className="px-4 py-3 space-y-1">
-            {['Services', 'Benefits', 'Use Cases', 'Testimonials'].map((item) => (
+            {['Services', 'Benefits', 'Use Cases', 'Demos', 'Testimonials'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '-')}`}
