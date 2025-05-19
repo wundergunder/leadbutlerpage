@@ -1,20 +1,95 @@
-import React, { useState } from 'react';
-import { Check, Calculator } from 'lucide-react';
+import React from 'react';
+import { Check, MessageSquare, Globe, Phone, Cog } from 'lucide-react';
+
+const PricingTier = ({ 
+  name, 
+  price, 
+  description, 
+  features,
+  icon: Icon,
+  recommended = false 
+}: { 
+  name: string;
+  price: number;
+  description: string;
+  features: string[];
+  icon: React.ElementType;
+  recommended?: boolean;
+}) => (
+  <div className={`bg-white rounded-xl p-8 border ${recommended ? 'border-blue-200 shadow-lg' : 'border-slate-100 shadow-md'}`}>
+    <div className="flex items-center justify-between mb-4">
+      <h3 className="text-2xl font-bold text-slate-800">{name}</h3>
+      <div className={`p-2 rounded-lg ${recommended ? 'bg-blue-100 text-blue-600' : 'bg-slate-100 text-slate-600'}`}>
+        <Icon className="w-6 h-6" />
+      </div>
+    </div>
+    <div className="mb-6">
+      <div className="flex items-baseline">
+        <span className="text-4xl font-bold text-slate-800">${price}</span>
+        <span className="text-slate-600 ml-2">/month/seat</span>
+      </div>
+    </div>
+    <p className="text-slate-600 mb-6">{description}</p>
+    <ul className="space-y-3 mb-8">
+      {features.map((feature, index) => (
+        <li key={index} className="flex items-start">
+          <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+          <span className="text-slate-600">{feature}</span>
+        </li>
+      ))}
+    </ul>
+    <a
+      href="#contact"
+      className={`block w-full text-center px-6 py-3 rounded-lg font-medium transition-colors ${
+        recommended 
+          ? 'bg-blue-600 text-white hover:bg-blue-700' 
+          : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+      }`}
+    >
+      Get Started
+    </a>
+  </div>
+);
 
 const Pricing: React.FC = () => {
-  const [roomCount, setRoomCount] = useState(1);
-  const pricePerRoom = 9;
-  const totalPrice = roomCount * pricePerRoom;
-
-  const features = [
-    "24/7 AI-powered guest communication",
-    "Multi-language support",
-    "Custom response templates",
-    "Analytics dashboard",
-    "Booking system integration",
-    "Email & chat support",
-    "Regular AI model updates",
-    "99.9% uptime guarantee"
+  const plans = [
+    {
+      name: "Starter",
+      price: 49,
+      description: "Perfect for small properties getting started with AI communication",
+      features: [
+        "24/7 AI guest messaging",
+        "All languages supported",
+        "Website chat integration"
+      ],
+      icon: MessageSquare
+    },
+    {
+      name: "Pro",
+      price: 99,
+      description: "Enhanced features for growing properties",
+      features: [
+        "All Starter features",
+        "Facebook Messenger integration",
+        "Instagram DM integration",
+        "WhatsApp integration",
+        "Advanced analytics"
+      ],
+      icon: Globe,
+      recommended: true
+    },
+    {
+      name: "Premium",
+      price: 199,
+      description: "Complete solution for enterprise properties",
+      features: [
+        "All Pro features",
+        "Custom PMS/CRM integrations",
+        "Mobile app access",
+        "Priority support"
+      ],
+      icon: Cog
+    }
   ];
 
   return (
@@ -25,67 +100,17 @@ const Pricing: React.FC = () => {
             Simple Pricing
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
-            Transparent Per-Room Pricing
+            Choose Your Plan
           </h2>
           <p className="text-lg text-slate-600">
-            Scale your guest communication efficiently with our straightforward pricing model.
+            Select the perfect plan for your property's needs. All plans include our core AI technology and 24/7 support.
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-          <div className="lg:w-1/2">
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-slate-100">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-slate-800">Calculate Your Price</h3>
-                <Calculator className="w-6 h-6 text-blue-600" />
-              </div>
-              
-              <div className="mb-8">
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Number of Rooms
-                </label>
-                <input
-                  type="number"
-                  min="1"
-                  value={roomCount}
-                  onChange={(e) => setRoomCount(Math.max(1, parseInt(e.target.value) || 1))}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-
-              <div className="bg-slate-50 p-6 rounded-lg mb-8">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-slate-600">Price per room</span>
-                  <span className="font-semibold text-slate-800">${pricePerRoom}/month</span>
-                </div>
-                <div className="flex justify-between items-center pt-4 border-t border-slate-200">
-                  <span className="text-lg font-semibold text-slate-800">Total Price</span>
-                  <span className="text-2xl font-bold text-blue-600">${totalPrice}/month</span>
-                </div>
-              </div>
-
-              <a
-                href="#contact"
-                className="block w-full text-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-              </a>
-            </div>
-          </div>
-
-          <div className="lg:w-1/2">
-            <h3 className="text-2xl font-bold text-slate-800 mb-6">Everything You Need</h3>
-            <div className="grid gap-4">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-4">
-                    <Check className="w-3 h-3" />
-                  </div>
-                  <span className="text-slate-700">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {plans.map((plan, index) => (
+            <PricingTier key={index} {...plan} />
+          ))}
         </div>
       </div>
     </section>
