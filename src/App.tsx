@@ -13,6 +13,8 @@ import Affiliate from './pages/Affiliate';
 import FAQs from './pages/FAQs';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import Mizata from './pages/Mizata';
+import Demos from './pages/Demos';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -47,6 +49,10 @@ function App() {
         return <Terms />;
       case 'privacy':
         return <Privacy />;
+      case 'mizata':
+        return <Mizata />;
+      case 'demos':
+        return <Demos />;
       default:
         return (
           <>
@@ -72,4 +78,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
