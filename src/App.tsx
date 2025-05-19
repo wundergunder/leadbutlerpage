@@ -13,6 +13,7 @@ import FAQs from './pages/FAQs';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Mizata from './pages/Mizata';
+import Sendero from './pages/Sendero';
 import Demos from './pages/Demos';
 
 function App() {
@@ -50,6 +51,8 @@ function App() {
         return <Privacy />;
       case 'mizata':
         return <Mizata />;
+      case 'sendero':
+        return <Sendero />;
       case 'demos':
         return <Demos />;
       default:
@@ -76,4 +79,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

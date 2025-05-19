@@ -23,6 +23,11 @@ const Demos: React.FC = () => {
       name: "MIZATA",
       description: "Experience how Lead Butler could enhance guest communication at MIZATA BY ANTIRESORT, a luxury eco-resort focused on sustainable hospitality.",
       image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682b73e47d0ac009dcba4414.png"
+    },
+    {
+      name: "Sendero",
+      description: "See how Lead Butler handles guest inquiries at Sendero Nosara, a boutique eco-hotel in Costa Rica offering world-class surfing and yoga experiences.",
+      image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682b7bf465f9d7433dfc8339.png"
     }
   ];
 
