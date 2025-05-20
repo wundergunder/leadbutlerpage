@@ -33,6 +33,11 @@ const Demos: React.FC = () => {
       name: "Esencia",
       description: "Discover how Lead Butler elevates guest communication at Hotel Esencia, an award-winning luxury resort on Mexico's Riviera Maya.",
       image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682c9ca3e8d710bb4ce2e230.jpeg"
+    },
+    {
+      name: "VIK",
+      description: "Experience how Lead Butler enhances guest communication at VIK Hotel, a luxury wine hotel offering unique accommodations and immersive wine experiences.",
+      image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682cf1967ae79b34a3da60d1.png"
     }
   ];
 

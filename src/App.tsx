@@ -15,6 +15,7 @@ import Privacy from './pages/Privacy';
 import Mizata from './pages/Mizata';
 import Sendero from './pages/Sendero';
 import Esencia from './pages/Esencia';
+import Vik from './pages/Vik';
 import Demos from './pages/Demos';
 
 function App() {
@@ -23,16 +24,13 @@ function App() {
   useEffect(() => {
     document.title = 'Lead Butler - AI Chatbot for Hospitality';
 
-    // Handle hash changes
     const handleHashChange = () => {
       const hash = window.location.hash.slice(1);
       setCurrentPage(hash || 'home');
     };
 
-    // Set initial page based on hash
     handleHashChange();
 
-    // Listen for hash changes
     window.addEventListener('hashchange', handleHashChange);
 
     return () => {
@@ -56,6 +54,8 @@ function App() {
         return <Sendero />;
       case 'esencia':
         return <Esencia />;
+      case 'vik':
+        return <Vik />;
       case 'demos':
         return <Demos />;
       default:
