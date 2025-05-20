@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hotel, ArrowRight } from 'lucide-react';
+import { Menu, X, MessageSquare, Hotel } from 'lucide-react';
 
 const DemoCard = ({ name, description, image }: { name: string; description: string; image: string }) => (
   <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 overflow-hidden">
@@ -11,7 +11,7 @@ const DemoCard = ({ name, description, image }: { name: string; description: str
         href={`#${name.toLowerCase().replace(/\s+/g, '-')}`}
         className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700"
       >
-        View Demo <ArrowRight className="ml-2 w-4 h-4" />
+        View Demo <Menu className="ml-2 w-4 h-4" />
       </a>
     </div>
   </div>
@@ -28,6 +28,11 @@ const Demos: React.FC = () => {
       name: "Sendero",
       description: "See how Lead Butler handles guest inquiries at Sendero Nosara, a boutique eco-hotel in Costa Rica offering world-class surfing and yoga experiences.",
       image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682b7bf465f9d7433dfc8339.png"
+    },
+    {
+      name: "Esencia",
+      description: "Discover how Lead Butler elevates guest communication at Hotel Esencia, an award-winning luxury resort on Mexico's Riviera Maya.",
+      image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682c9ca3e8d710bb4ce2e230.jpeg"
     }
   ];
 
