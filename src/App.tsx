@@ -16,6 +16,7 @@ import Mizata from './pages/Mizata';
 import Sendero from './pages/Sendero';
 import Esencia from './pages/Esencia';
 import Vik from './pages/Vik';
+import Alma from './pages/Alma';
 import Demos from './pages/Demos';
 
 function App() {
@@ -56,6 +57,8 @@ function App() {
         return <Esencia />;
       case 'vik':
         return <Vik />;
+      case 'alma':
+        return <Alma />;
       case 'demos':
         return <Demos />;
       default:

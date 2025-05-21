@@ -38,6 +38,11 @@ const Demos: React.FC = () => {
       name: "VIK",
       description: "Experience how Lead Butler enhances guest communication at VIK Hotel, a luxury wine hotel offering unique accommodations and immersive wine experiences.",
       image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682cf1967ae79b34a3da60d1.png"
+    },
+    {
+      name: "Alma",
+      description: "See how Lead Butler enhances guest communication at Alma Historica Hotel, a boutique hotel that combines historic charm with modern luxury in Montevideo.",
+      image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682d0bf9e10a08016bd418ee.png"
     }
   ];
 
@@ -61,4 +66,4 @@ const Demos: React.FC = () => {
   );
 };
 
-export default Demos;
+export default Demos
