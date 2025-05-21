@@ -26,18 +26,18 @@ const BenefitItem: React.FC<BenefitProps> = ({ icon, title, description, iconCol
 const Benefits: React.FC = () => {
   const benefits = [
     {
+      icon: <DollarSign className="w-6 h-6" />,
+      title: "Save OTA Commissions",
+      description: "Increase direct bookings by providing instant responses to booking inquiries, reducing dependency on Online Travel Agencies.",
+      iconColor: "text-green-600",
+      bgColor: "bg-green-100"
+    },
+    {
       icon: <Clock className="w-6 h-6" />,
       title: "Save Staff Time",
       description: "Free up your team from answering repetitive questions, allowing them to focus on high-value guest interactions.",
       iconColor: "text-blue-600",
       bgColor: "bg-blue-100"
-    },
-    {
-      icon: <DollarSign className="w-6 h-6" />,
-      title: "Reduce Operational Costs",
-      description: "Lower staffing requirements for basic customer service and information requests.",
-      iconColor: "text-green-600",
-      bgColor: "bg-green-100"
     },
     {
       icon: <Smile className="w-6 h-6" />,
@@ -55,8 +55,8 @@ const Benefits: React.FC = () => {
     },
     {
       icon: <BarChart4 className="w-6 h-6" />,
-      title: "Data-Driven Insights",
-      description: "Gain valuable intelligence about common questions and concerns to improve your offerings.",
+      title: "Reduce Operational Costs",
+      description: "Lower staffing requirements for basic customer service and information requests.",
       iconColor: "text-teal-600",
       bgColor: "bg-teal-100"
     }
