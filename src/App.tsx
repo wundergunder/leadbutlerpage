@@ -17,6 +17,7 @@ import Sendero from './pages/Sendero';
 import Esencia from './pages/Esencia';
 import Vik from './pages/Vik';
 import Alma from './pages/Alma';
+import Santuario from './pages/Santuario';
 import Demos from './pages/Demos';
 
 function App() {
@@ -59,6 +60,8 @@ function App() {
         return <Vik />;
       case 'alma':
         return <Alma />;
+      case 'santuario':
+        return <Santuario />;
       case 'demos':
         return <Demos />;
       default:

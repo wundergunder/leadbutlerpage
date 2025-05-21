@@ -43,6 +43,11 @@ const Demos: React.FC = () => {
       name: "Alma",
       description: "See how Lead Butler enhances guest communication at Alma Historica Hotel, a boutique hotel that combines historic charm with modern luxury in Montevideo.",
       image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682d0bf9e10a08016bd418ee.png"
+    },
+    {
+      name: "Santuario",
+      description: "Experience how Lead Butler enhances guest communication at Santuario, a luxurious retreat offering unique accommodations and exceptional experiences.",
+      image: "https://storage.googleapis.com/msgsndr/f3n00M2vZx6xlPD7wdA2/media/682d1b0ce7803d18b40cbbd7.png"
     }
   ];
 
