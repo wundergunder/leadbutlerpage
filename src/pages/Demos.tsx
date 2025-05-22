@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, X, MessageSquare, Hotel } from 'lucide-react';
+import { Menu, X, MessageSquare, Hotel, MessageCircle } from 'lucide-react';
 
 const DemoCard = ({ name, description, image }: { name: string; description: string; image: string }) => (
   <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-slate-100 overflow-hidden">
@@ -54,6 +54,24 @@ const Demos: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 pt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="bg-blue-50 rounded-xl p-8 mb-12 border border-blue-100">
+          <div className="flex items-center mb-4">
+            <MessageCircle className="w-6 h-6 text-blue-600 mr-3" />
+            <h2 className="text-2xl font-bold text-slate-800">Try Our WhatsApp Demo</h2>
+          </div>
+          <p className="text-slate-600 mb-6">
+            Experience Lead Butler's AI chatbot in action through WhatsApp! Send a message and see how our intelligent system handles guest inquiries in real-time.
+          </p>
+          <a 
+            href="https://wa.me/message/XNHW7DLL3NJVI1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl"
+          >
+            Start WhatsApp Demo
+          </a>
+        </div>
+
         <div className="flex items-center mb-8">
           <Hotel className="w-6 h-6 text-blue-600 mr-3" />
           <h1 className="text-3xl font-bold text-slate-800">Demo Properties</h1>
@@ -71,4 +89,4 @@ const Demos: React.FC = () => {
   );
 };
 
-export default Demos
+export default Demos;
